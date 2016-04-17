@@ -35,7 +35,7 @@ window.ConwayModel = (function(){
         newGrid.push([]);
         for(var j = 0; j < y; j++){
         newGrid[i][j] = false;
-          if(Math.floor(Math.random() * 3) === 1){
+          if(Math.floor(Math.random() * 9) === 1){
             newGrid[i][j] = true;
           }
         }
