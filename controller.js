@@ -6,20 +6,24 @@ window.ConwayController = (function(){
    *
    */
   function Controller(){
-    this.view = new View();
-    this.model = new Model();
+    // this.view = new View();
+    this.model = new ConwayModel(50, 50);
+    this.view = new ConwayView();
+
+    setInterval(this.step.bind(this), 1000);
   }
   /**
    * step
    *
-   * @returns {array[array[bool]]} The current game grid
    */
   Controller.prototype.step = function(){  
     //Step game logic
     this.model.step();
-
-    return this.model.grid;
+    this.view.update(this.model.grid);
   }
+  return Controller;
+
+
 })();
 
 
