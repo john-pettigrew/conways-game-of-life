@@ -10,7 +10,7 @@ window.ConwayController = (function(){
     this.model = new ConwayModel(50, 50);
     this.view = new ConwayView();
 
-    setInterval(this.step.bind(this), 1000);
+    setInterval(this.step.bind(this), 2000);
   }
   /**
    * step
