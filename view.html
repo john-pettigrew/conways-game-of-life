@@ -2,9 +2,13 @@
   <head>
   </head>
   <body>
-    TEST
-    <canvas id="game"></canvas>
-    <script src="./controller.js"></script>
+    <div>TEST</div>
+    <canvas id="game" width="1000" height="1000" style="z-index:-1; position: absolute; top:0; left:0;"></canvas>
     <script src="./model.js"></script>
+    <script src="./view.js"></script>
+    <script src="./controller.js"></script>
+    <script>
+      new ConwayController();
+    </script>
   </body>
 </html>
